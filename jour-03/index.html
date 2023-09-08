@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test findOneStudent Function</title>
+</head>
+<body>
+  <?php
+    require_once 'function.php';
+    $id = 1;
+    $student = findOneStudent($id);
+    echo "Student ID: " . $student['id'] . "<br>";
+    echo "Student Name: " . $student['name'] . "<br>";
+    echo "Student Email: " . $student['email'] . "<br>";
+  ?>
+</body>
+</html>
