@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 function find_one_student(string $email) : array {
     $host = "localhost";
     $username = "root";
-    $password = "Oleg4342758=)";
+    $password = "root";
     $dbname = "lp_official";
     
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -27,7 +27,7 @@ function find_one_student(string $email) : array {
     <title>Student table</title>
 </head>
 <body>
-<form method="GET" action="">
+<form method="POST" action="">
   <label for="name">E-mail : </label><br>
   <input type="text" id="email" name="input-email-student"><br>
   <button type="submit" onlick="">Chercher E-mail</button>

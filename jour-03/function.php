@@ -14,7 +14,7 @@ function findOneStudent(int $id): Student {
     $stmt = $db->prepare('SELECT * FROM student WHERE id = ?');
     $stmt->execute([$id]);
     $student = $stmt->fetch();
-    return new Student($student['id'], $student['']);
+    return new Student($student['id'], false, $student['email'], $student['fullname'], false, false);
 }
 function findOneRoom(int $id): Room {
     global $host, $username, $password, $dbname;
@@ -40,5 +40,3 @@ function findOneFloor(int $id): Student {
     $student = $stmt->fetch();
     return new Student;
 }
-
-$oldStudent = Student

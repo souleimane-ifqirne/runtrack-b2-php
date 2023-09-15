@@ -12,5 +12,3 @@ function my_is_prime(int $number) : bool {
     }
     return true;
 }
-
-echo "The number is pair : " . (my_is_prime(3) ? 'true' : 'false');
